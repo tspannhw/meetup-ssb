@@ -1,0 +1,21 @@
+{
+  "metadata" : {
+    "schema.0.data-type" : "TIMESTAMP(3) NOT NULL",
+    "schema.2.name" : "order_status",
+    "format" : "json",
+    "schema.1.name" : "window_end",
+    "scan.startup.mode" : "group-offsets",
+    "schema.4.name" : "total_amount",
+    "schema.1.data-type" : "TIMESTAMP(3) NOT NULL",
+    "schema.3.data-type" : "BIGINT NOT NULL",
+    "connector" : "kafka: Local Kafka",
+    "schema.2.data-type" : "VARCHAR(2147483647)",
+    "schema.3.name" : "order_count",
+    "topic" : "mytopic",
+    "schema.4.data-type" : "INT",
+    "schema.0.name" : "window_start"
+  },
+  "type" : "ssb",
+  "table_name" : "local_kafka_table_1709829993",
+  "transform_code_b64_encoded" : false
+}

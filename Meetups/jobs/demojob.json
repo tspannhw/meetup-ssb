@@ -1,7 +1,7 @@
 {
   "job_name" : "demojob",
   "api_endpoints" : [ ],
-  "sql" : "describe orders",
+  "sql" : "insert into local_kafka_table_1709829993 select * from summaries",
   "mv_config" : {
     "name" : "demojob",
     "retention" : 300,

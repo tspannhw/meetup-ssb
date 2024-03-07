@@ -1,0 +1,20 @@
+{
+  "metadata" : {
+    "__ssb.is_view" : "true",
+    "schema.0.data-type" : "TIMESTAMP(3) NOT NULL",
+    "schema.2.name" : "order_status",
+    "schema.1.name" : "window_end",
+    "schema.4.name" : "total_amount",
+    "schema.1.data-type" : "TIMESTAMP(3) NOT NULL",
+    "schema.3.data-type" : "BIGINT NOT NULL",
+    "__ssb.view.original_query" : "SELECT `window_start`, `window_end`, `order_status`, COUNT(*) AS `order_count`, SUM(`amount`) AS `total_amount`\nFROM TABLE(TUMBLE(TABLE `orders`, DESCRIPTOR(`order_time`), INTERVAL '20' SECOND))\nGROUP BY `window_start`, `window_end`, `order_status`",
+    "schema.2.data-type" : "VARCHAR(2147483647)",
+    "schema.3.name" : "order_count",
+    "__ssb.view.expanded_query" : "SELECT `window_start`, `window_end`, `order_status`, COUNT(*) AS `order_count`, SUM(`amount`) AS `total_amount`\nFROM TABLE(TUMBLE(TABLE `ssb`.`Meetups`.`orders`, DESCRIPTOR(`order_time`), INTERVAL '20' SECOND))\nGROUP BY `window_start`, `window_end`, `order_status`",
+    "schema.4.data-type" : "INT",
+    "schema.0.name" : "window_start"
+  },
+  "type" : "ssb",
+  "table_name" : "summaries",
+  "transform_code_b64_encoded" : false
+}
