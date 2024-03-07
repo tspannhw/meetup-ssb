@@ -1,0 +1,45 @@
+{
+  "metadata" : {
+    "avro.schema" : "{\"type\":\"record\",\"name\":\"transcom\",\"fields\":[{\"name\":\"title\",\"type\":[\"string\",\"null\"]},{\"name\":\"description\",\"type\":[\"string\",\"null\"]},{\"name\":\"pubDate\",\"type\":[\"string\",\"null\"]},{\"name\":\"point\",\"type\":[\"string\",\"null\"]},{\"name\":\"latitude\",\"type\":[\"double\"],\"default\":0},{\"name\":\"longitude\",\"type\":[\"double\"],\"default\":0},{\"name\":\"uuid\",\"type\":[\"null\",\"string\"]},{\"name\":\"ts\",\"type\":[\"long\"],\"default\":1,\"logicalType\":\"timestamp-millis\"}]}",
+    "schema.7.data-type" : "BIGINT",
+    "schema.8.metadata" : "timestamp",
+    "schema.0.data-type" : "VARCHAR(2147483647)",
+    "schema.1.name" : "description",
+    "scan.startup.mode" : "earliest-offset",
+    "schema.4.name" : "latitude",
+    "schema.3.data-type" : "VARCHAR(2147483647)",
+    "schema.3.name" : "point",
+    "schema.7.name" : "ts",
+    "properties.request.timeout.ms" : "120000",
+    "schema.watermark.0.strategy.data-type" : "TIMESTAMP(3)",
+    "schema.6.name" : "uuid",
+    "schema.5.data-type" : "DOUBLE",
+    "schema.0.name" : "title",
+    "schema.5.name" : "longitude",
+    "schema.watermark.0.strategy.expr" : "`eventTimestamp` - INTERVAL '3' SECOND",
+    "properties.auto.offset.reset" : "earliest",
+    "schema.8.data-type" : "TIMESTAMP(3) WITH LOCAL TIME ZONE",
+    "schema.2.name" : "pubDate",
+    "format" : "avro",
+    "schema.8.virtual" : "false",
+    "schema.6.data-type" : "VARCHAR(2147483647)",
+    "schema.1.data-type" : "VARCHAR(2147483647)",
+    "connector" : "kafka: Local Kafka",
+    "schema.2.data-type" : "VARCHAR(2147483647)",
+    "schema.watermark.0.rowtime" : "eventTimestamp",
+    "properties.transaction.timeout.ms" : "900000",
+    "topic" : "transcom",
+    "schema.4.data-type" : "DOUBLE",
+    "schema.8.name" : "eventTimestamp",
+    "ssb.schema.text" : "{\n \"type\": \"record\",\n \"name\": \"transcom\",\n \"fields\": [\n  {\n   \"name\": \"title\",\n   \"type\": [\"string\",\"null\"]\n  },\n  {\n   \"name\": \"description\",\n   \"type\": [\"string\",\"null\"]\n  },\n  {\n   \"name\": \"pubDate\",\n   \"type\": [\"string\",\"null\"]\n  },\n  {\n   \"name\": \"point\",\n   \"type\": [\"string\",\"null\"]\n  },\n     {\n    \"name\": \"latitude\",\n    \"type\": [\"double\"],\n    \"default\": 0\n   },\n   {\n    \"name\": \"longitude\",\n    \"type\": [\"double\"],\n    \"default\": 0\n   },\n  { \"name\" : \"uuid\", \"type\" : [\"null\", \"string\"]}, \n{ \"name\" : \"ts\", \"type\" : [\"long\"], \"default\": 1, \"logicalType\": \"timestamp-millis\"}\n ]\n}",
+    "ssb.watermark_spec" : {
+      "timestamp_column" : "__ssb_kafka_timestamp"
+    },
+    "ssb.properties" : {
+      "auto.offset.reset" : "earliest"
+    }
+  },
+  "type" : "ssb",
+  "table_name" : "transcom2",
+  "transform_code_b64_encoded" : false
+}

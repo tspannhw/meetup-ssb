@@ -1,0 +1,50 @@
+{
+  "metadata" : {
+    "schema.10.metadata" : "timestamp",
+    "schema.7.data-type" : "VARCHAR(2147483647)",
+    "schema.0.data-type" : "VARCHAR(2147483647)",
+    "schema.10.virtual" : "false",
+    "schema.9.name" : "ts",
+    "schema.1.name" : "description",
+    "scan.startup.mode" : "earliest-offset",
+    "schema.4.name" : "companyname",
+    "deserialization.failure.policy" : "ignore_and_log",
+    "schema.3.data-type" : "VARCHAR(2147483647)",
+    "schema.3.name" : "advisoryAlert",
+    "schema.7.name" : "link",
+    "properties.request.timeout.ms" : "120000",
+    "schema.watermark.0.strategy.data-type" : "TIMESTAMP(3)",
+    "schema.6.name" : "guid",
+    "schema.5.data-type" : "VARCHAR(2147483647)",
+    "schema.0.name" : "title",
+    "schema.5.name" : "servicename",
+    "schema.watermark.0.strategy.expr" : "`eventTimestamp` - INTERVAL '3' SECOND",
+    "properties.auto.offset.reset" : "earliest",
+    "schema.8.data-type" : "VARCHAR(2147483647)",
+    "schema.2.name" : "pubDate",
+    "format" : "json",
+    "schema.6.data-type" : "VARCHAR(2147483647)",
+    "schema.1.data-type" : "VARCHAR(2147483647)",
+    "connector" : "kafka: Local Kafka",
+    "schema.2.data-type" : "VARCHAR(2147483647)",
+    "schema.10.data-type" : "TIMESTAMP(3) WITH LOCAL TIME ZONE",
+    "schema.watermark.0.rowtime" : "eventTimestamp",
+    "properties.transaction.timeout.ms" : "900000",
+    "topic" : "newjerseybus_sink",
+    "schema.9.data-type" : "BIGINT",
+    "schema.4.data-type" : "VARCHAR(2147483647)",
+    "schema.10.name" : "eventTimestamp",
+    "schema.8.name" : "uuid",
+    "ssb.schema.text" : "{\n \"type\": \"record\",\n \"name\": \"newjerseybus\",\n \"fields\": [\n  {\n   \"name\": \"title\",\n   \"type\": [\"string\",\"null\"]\n  },\n  {\n   \"name\": \"description\",\n   \"type\": [\"string\",\"null\"]\n  },\n  {\n   \"name\": \"pubDate\",\n   \"type\": [\"string\",\"null\"]\n  },\n    {\n   \"name\": \"advisoryAlert\",\n   \"type\": [\"string\",\"null\"]\n  },\n      {\n   \"name\": \"companyname\",\n   \"type\": [\"string\",\"null\"]\n  },\n      {\n   \"name\": \"servicename\",\n   \"type\": [\"string\",\"null\"]\n  },  \n  {\n   \"name\": \"guid\",\n   \"type\": [\"string\",\"null\"]\n  },\n  {\n   \"name\": \"link\",\n   \"type\": [\"string\",\"null\"]\n  },\n  { \"name\" : \"uuid\", \"type\" : [\"null\", \"string\"]}, \n{ \"name\" : \"ts\", \"type\" : [\"long\"], \"default\": 1, \"logicalType\": \"timestamp-millis\"}\n ]\n}",
+    "ssb.watermark_spec" : {
+      "timestamp_column" : "__ssb_kafka_timestamp"
+    },
+    "ssb.properties" : {
+      "auto.offset.reset" : "earliest"
+    }
+  },
+  "type" : "ssb",
+  "table_name" : "newjerseybus_sink",
+  "transform_code_b64_encoded" : false,
+  "transform_code" : ""
+}

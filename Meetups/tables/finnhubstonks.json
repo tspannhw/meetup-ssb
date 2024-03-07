@@ -1,0 +1,48 @@
+{
+  "metadata" : {
+    "schema.7.data-type" : "TIMESTAMP(3) WITH LOCAL TIME ZONE",
+    "schema.0.data-type" : "VARCHAR(2147483647)",
+    "schema.1.name" : "symbol",
+    "scan.startup.mode" : "group-offsets",
+    "schema.4.name" : "volume",
+    "deserialization.failure.policy" : "ignore_and_log",
+    "schema.3.data-type" : "DOUBLE",
+    "schema.3.name" : "currentts",
+    "schema.7.name" : "eventTimeStamp",
+    "properties.request.timeout.ms" : "120000",
+    "schema.watermark.0.strategy.data-type" : "TIMESTAMP(3)",
+    "schema.6.name" : "tradeconditions",
+    "schema.5.data-type" : "DOUBLE",
+    "schema.7.virtual" : "false",
+    "schema.0.name" : "uuid",
+    "schema.5.name" : "price",
+    "schema.watermark.0.strategy.expr" : "`eventTimeStamp` - INTERVAL '3' SECOND",
+    "properties.auto.offset.reset" : "earliest",
+    "schema.2.name" : "ts",
+    "format" : "json",
+    "schema.6.data-type" : "VARCHAR(2147483647)",
+    "schema.1.data-type" : "VARCHAR(2147483647)",
+    "connector" : "kafka: Local Kafka",
+    "schema.2.data-type" : "DOUBLE",
+    "schema.watermark.0.rowtime" : "eventTimeStamp",
+    "properties.transaction.timeout.ms" : "900000",
+    "topic" : "finnhubstocks",
+    "properties.group.id" : "finnhubstonksflink",
+    "schema.4.data-type" : "DOUBLE",
+    "schema.7.metadata" : "timestamp",
+    "ssb.schema.text" : "{\n  \"type\": \"record\",\n  \"name\": \"inferredSchema\",\n  \"fields\": [\n    {\n      \"name\": \"uuid\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"20231214145344_dfa767c3-e39e-405d-915d-1af3cce4f03d\\\"'\"\n    },\n    {\n      \"name\": \"symbol\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"TSLA\\\"'\"\n    },\n    {\n      \"name\": \"ts\",\n      \"type\": \"double\",\n      \"doc\": \"Type inferred from '1.702565623038E12'\"\n    },\n    {\n      \"name\": \"currentts\",\n      \"type\": \"double\",\n      \"doc\": \"Type inferred from '2.0231214145344E13'\"\n    },\n    {\n      \"name\": \"volume\",\n      \"type\": \"double\",\n      \"doc\": \"Type inferred from '8.0'\"\n    },\n    {\n      \"name\": \"price\",\n      \"type\": \"double\",\n      \"doc\": \"Type inferred from '245.518'\"\n    },\n    {\n      \"name\": \"tradeconditions\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"1,12\\\"'\"\n    }\n  ]\n}",
+    "ssb.watermark_spec" : {
+      "timestamp_column" : "__ssb_kafka_timestamp",
+      "watermark_seconds" : null,
+      "rowtime_column" : "eventTimeStamp"
+    },
+    "ssb.properties" : {
+      "auto.offset.reset" : "earliest",
+      "group.id" : "finnhubstonksflink"
+    }
+  },
+  "type" : "ssb",
+  "table_name" : "finnhubstonks",
+  "transform_code_b64_encoded" : false,
+  "transform_code" : ""
+}

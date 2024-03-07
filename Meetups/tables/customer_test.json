@@ -1,0 +1,30 @@
+{
+  "metadata" : {
+    "schema.5.name" : "email",
+    "fields.email.expression" : "#{internet.emailAddress}",
+    "fields.phone_number.expression" : "#{phone_number.cellPhone}",
+    "schema.0.data-type" : "VARCHAR(2147483647)",
+    "schema.2.name" : "age",
+    "schema.1.name" : "last_name",
+    "schema.6.data-type" : "VARCHAR(2147483647)",
+    "fields.age.expression" : "#{number.numberBetween '18','100'}",
+    "schema.4.name" : "country",
+    "schema.1.data-type" : "VARCHAR(2147483647)",
+    "schema.3.data-type" : "VARCHAR(2147483647)",
+    "fields.country.expression" : "#{country.name}",
+    "connector" : "faker",
+    "schema.2.data-type" : "INT",
+    "schema.3.name" : "city",
+    "fields.last_name.expression" : "#{name.lastName}",
+    "schema.6.name" : "phone_number",
+    "schema.5.data-type" : "VARCHAR(2147483647)",
+    "fields.city.expression" : "#{address.cityName}",
+    "rows-per-second" : "10",
+    "fields.first_name.expression" : "#{name.firstName}",
+    "schema.4.data-type" : "VARCHAR(2147483647)",
+    "schema.0.name" : "first_name"
+  },
+  "type" : "ssb",
+  "table_name" : "customer_test",
+  "transform_code_b64_encoded" : false
+}

@@ -1,0 +1,8 @@
+{
+  "name" : "TOTZ",
+  "description" : "totz",
+  "language" : "JavaScript",
+  "output_type" : "STRING",
+  "input_types" : [ "STRING" ],
+  "code" : "function totz(lon){\n\n  var numLon = Number(lon);\n\n \n\n  if (isNaN(numLon) || lon == \"\") {\n\n      return \"\";\n\n  }\n\n \n\n  var seconds = numLon / 0.004167;\n\n  var hours = seconds / 3600;\n\n \n\n  // Return only the hours portion, and discard the minutes\n\n  hours = Math.floor(hours);\n\n \n\n  return \"GMT \" + (hours > 0 ? \"+\" : \"-\") + hours;\n\n}\n\n\n\n\ntotz($p0);  // this line must exist"
+}

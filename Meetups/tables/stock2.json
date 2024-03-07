@@ -1,0 +1,52 @@
+{
+  "metadata" : {
+    "schema.10.metadata" : "timestamp",
+    "schema.7.data-type" : "VARCHAR(2147483647)",
+    "schema.0.data-type" : "VARCHAR(2147483647)",
+    "schema.10.virtual" : "false",
+    "schema.9.name" : "low",
+    "schema.1.name" : "uuid",
+    "scan.startup.mode" : "group-offsets",
+    "schema.4.name" : "datetime",
+    "deserialization.failure.policy" : "ignore_and_log",
+    "schema.3.data-type" : "BIGINT",
+    "schema.3.name" : "dt",
+    "schema.7.name" : "high",
+    "properties.request.timeout.ms" : "120000",
+    "schema.watermark.0.strategy.data-type" : "TIMESTAMP(3)",
+    "schema.6.name" : "close",
+    "schema.5.data-type" : "VARCHAR(2147483647)",
+    "schema.0.name" : "symbol",
+    "schema.5.name" : "open",
+    "schema.watermark.0.strategy.expr" : "`eventTimestamp` - INTERVAL '3' SECOND",
+    "properties.auto.offset.reset" : "earliest",
+    "schema.8.data-type" : "VARCHAR(2147483647)",
+    "schema.2.name" : "ts",
+    "format" : "json",
+    "schema.6.data-type" : "VARCHAR(2147483647)",
+    "schema.1.data-type" : "VARCHAR(2147483647)",
+    "connector" : "kafka: Local Kafka",
+    "schema.2.data-type" : "BIGINT",
+    "schema.10.data-type" : "TIMESTAMP(3) WITH LOCAL TIME ZONE",
+    "schema.watermark.0.rowtime" : "eventTimestamp",
+    "properties.transaction.timeout.ms" : "900000",
+    "topic" : "stocks2",
+    "properties.group.id" : "stock2flink",
+    "schema.9.data-type" : "VARCHAR(2147483647)",
+    "schema.4.data-type" : "VARCHAR(2147483647)",
+    "schema.10.name" : "eventTimestamp",
+    "schema.8.name" : "volume",
+    "ssb.schema.text" : "{\n  \"type\": \"record\",\n  \"name\": \"inferredSchema\",\n  \"fields\": [\n    {\n      \"name\": \"symbol\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"IBM\\\"'\"\n    },\n    {\n      \"name\": \"uuid\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"ec2f9ff2-abcc-4964-bee4-b7ca9bf3d9f5\\\"'\"\n    },\n    {\n      \"name\": \"ts\",\n      \"type\": \"long\",\n      \"doc\": \"Type inferred from '1702565381302'\"\n    },\n    {\n      \"name\": \"dt\",\n      \"type\": \"long\",\n      \"doc\": \"Type inferred from '1673707680000'\"\n    },\n    {\n      \"name\": \"datetime\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"2023/01/14 09:48:00\\\"'\"\n    },\n    {\n      \"name\": \"open\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"161.16000\\\"'\"\n    },\n    {\n      \"name\": \"close\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"161.08000\\\"'\"\n    },\n    {\n      \"name\": \"high\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"161.17500\\\"'\"\n    },\n    {\n      \"name\": \"volume\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"51657\\\"'\"\n    },\n    {\n      \"name\": \"low\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"160.89500\\\"'\"\n    }\n  ]\n}",
+    "ssb.watermark_spec" : {
+      "timestamp_column" : "__ssb_kafka_timestamp"
+    },
+    "ssb.properties" : {
+      "auto.offset.reset" : "earliest",
+      "group.id" : "stock2flink"
+    }
+  },
+  "type" : "ssb",
+  "table_name" : "stock2",
+  "transform_code_b64_encoded" : false,
+  "transform_code" : ""
+}

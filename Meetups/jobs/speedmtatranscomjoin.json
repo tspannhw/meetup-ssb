@@ -1,0 +1,392 @@
+{
+  "job_name" : "speedmtatranscomjoin",
+  "api_endpoints" : [ {
+    "endpoint" : "mtatransspeed",
+    "code" : "SELECT \"speed\", \"travel_time\", \"borough\", \"link_name\", \"link_points\", \"latitude\", \"longitude\", \"miles\", \"title\", \"description\", \"pubDate\", \"latitude0\", \"longitude0\", \"VehicleLocationLatitude\", \"VehicleLocationLongitude\", \"StopPointRef\", \"VehicleRef\", \"ProgressRate\", \"ExpectedDepartureTime\", \"StopPoint\", \"VisitNumber\", \"DataFrameRef\", \"StopPointName\", \"Bearing\", \"OriginAimedDepartureTime\", \"OperatorRef\", \"DestinationName\", \"ExpectedArrivalTime\", \"BlockRef\", \"LineRef\", \"DirectionRef\", \"ArrivalProximityText\", \"DistanceFromStop\", \"EstimatedPassengerCapacity\", \"AimedArrivalTime\", \"PublishedLineName\", \"ProgressStatus\", \"DestinationRef\", \"EstimatedPassengerCount\", \"OriginRef\", \"NumberOfStopsAway\", \"ts\", \"eventTimeStamp\", \"allid\" FROM mv_1aa89649_speedmtatranscomjoin",
+    "builder_data" : {
+      "rules" : {
+        "condition" : "AND",
+        "rules" : [ ]
+      },
+      "selectedColumns" : [ {
+        "index" : 1,
+        "name" : "speed",
+        "alias" : "speed",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 2,
+        "name" : "travel_time",
+        "alias" : "travel_time",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 3,
+        "name" : "borough",
+        "alias" : "borough",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 4,
+        "name" : "link_name",
+        "alias" : "link_name",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 5,
+        "name" : "link_points",
+        "alias" : "link_points",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 6,
+        "name" : "latitude",
+        "alias" : "latitude",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 7,
+        "name" : "longitude",
+        "alias" : "longitude",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 8,
+        "name" : "miles",
+        "alias" : "miles",
+        "expr" : null,
+        "typeName" : "FLOAT",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 9,
+        "name" : "title",
+        "alias" : "title",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 10,
+        "name" : "description",
+        "alias" : "description",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 11,
+        "name" : "pubDate",
+        "alias" : "pubDate",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 12,
+        "name" : "latitude0",
+        "alias" : "latitude0",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 13,
+        "name" : "longitude0",
+        "alias" : "longitude0",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 14,
+        "name" : "VehicleLocationLatitude",
+        "alias" : "VehicleLocationLatitude",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 15,
+        "name" : "VehicleLocationLongitude",
+        "alias" : "VehicleLocationLongitude",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 16,
+        "name" : "StopPointRef",
+        "alias" : "StopPointRef",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 17,
+        "name" : "VehicleRef",
+        "alias" : "VehicleRef",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 18,
+        "name" : "ProgressRate",
+        "alias" : "ProgressRate",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 19,
+        "name" : "ExpectedDepartureTime",
+        "alias" : "ExpectedDepartureTime",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 20,
+        "name" : "StopPoint",
+        "alias" : "StopPoint",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 21,
+        "name" : "VisitNumber",
+        "alias" : "VisitNumber",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 22,
+        "name" : "DataFrameRef",
+        "alias" : "DataFrameRef",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 23,
+        "name" : "StopPointName",
+        "alias" : "StopPointName",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 24,
+        "name" : "Bearing",
+        "alias" : "Bearing",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 25,
+        "name" : "OriginAimedDepartureTime",
+        "alias" : "OriginAimedDepartureTime",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 26,
+        "name" : "OperatorRef",
+        "alias" : "OperatorRef",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 27,
+        "name" : "DestinationName",
+        "alias" : "DestinationName",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 28,
+        "name" : "ExpectedArrivalTime",
+        "alias" : "ExpectedArrivalTime",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 29,
+        "name" : "BlockRef",
+        "alias" : "BlockRef",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 30,
+        "name" : "LineRef",
+        "alias" : "LineRef",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 31,
+        "name" : "DirectionRef",
+        "alias" : "DirectionRef",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 32,
+        "name" : "ArrivalProximityText",
+        "alias" : "ArrivalProximityText",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 33,
+        "name" : "DistanceFromStop",
+        "alias" : "DistanceFromStop",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 34,
+        "name" : "EstimatedPassengerCapacity",
+        "alias" : "EstimatedPassengerCapacity",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 35,
+        "name" : "AimedArrivalTime",
+        "alias" : "AimedArrivalTime",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 36,
+        "name" : "PublishedLineName",
+        "alias" : "PublishedLineName",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 37,
+        "name" : "ProgressStatus",
+        "alias" : "ProgressStatus",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 38,
+        "name" : "DestinationRef",
+        "alias" : "DestinationRef",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 39,
+        "name" : "EstimatedPassengerCount",
+        "alias" : "EstimatedPassengerCount",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 40,
+        "name" : "OriginRef",
+        "alias" : "OriginRef",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 41,
+        "name" : "NumberOfStopsAway",
+        "alias" : "NumberOfStopsAway",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 42,
+        "name" : "ts",
+        "alias" : "ts",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 43,
+        "name" : "eventTimeStamp",
+        "alias" : "eventTimeStamp",
+        "expr" : null,
+        "typeName" : "TIMESTAMP_WITH_LOCAL_TIME_ZONE",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 44,
+        "name" : "allid",
+        "alias" : "allid",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      } ]
+    },
+    "description" : "MTA Buses\nTRANSCOM Highway Status\nNY Speed "
+  } ],
+  "sql" : "SELECT n.speed, n.travel_time, n.borough, n.link_name, n.link_points,\n       n.latitude, n.longitude, DISTANCE_BETWEEN(CAST(t.latitude as STRING), \n                 CAST(t.latitude as STRING), \n                 m.VehicleLocationLatitude, m.VehicleLocationLongitude) as miles, \n       t.title, t.`description`, t.pubDate, t.latitude, t.longitude,\n       m.VehicleLocationLatitude, m.VehicleLocationLongitude, \n       m.StopPointRef, m.VehicleRef,\n       m.ProgressRate, m.ExpectedDepartureTime, m.StopPoint,\n       m.VisitNumber, m.DataFrameRef, m.StopPointName,\n       m.Bearing, m.OriginAimedDepartureTime, m.OperatorRef,\n       m.DestinationName, m.ExpectedArrivalTime, m.BlockRef,\n       m.LineRef, m.DirectionRef, m.ArrivalProximityText,\n       m.DistanceFromStop, m.EstimatedPassengerCapacity, \n       m.AimedArrivalTime, m.PublishedLineName, \n       m.ProgressStatus, m.DestinationRef, m.EstimatedPassengerCount,\n       m.OriginRef, m.NumberOfStopsAway, m.ts, n.eventTimeStamp, (m.uuid || t.uuid || n.uuid) as allid \nFROM  jsonmta /*+ OPTIONS('scan.startup.mode' = 'earliest-offset') */  m\n      FULL OUTER JOIN jsontranscom /*+ OPTIONS('scan.startup.mode' = 'earliest-offset') */  t\n       ON (t.latitude >= CAST(m.VehicleLocationLatitude as float) - 0.3) \n       AND (t.longitude >= CAST(m.VehicleLocationLongitude as float) - 0.3) \n       AND (t.latitude <= CAST(m.VehicleLocationLatitude as float) + 0.3) \n       AND (t.longitude <= CAST(m.VehicleLocationLongitude as float) + 0.3)   \n     FULL OUTER JOIN nytrafficspeed /*+ OPTIONS('scan.startup.mode' = 'earliest-offset') */  n\n     ON (n.latitude >= CAST(m.VehicleLocationLatitude as float) - 0.3) \n     AND (n.longitude >= CAST(m.VehicleLocationLongitude as float) - 0.3) \n     AND (n.latitude <= CAST(m.VehicleLocationLatitude as float) + 0.3) \n     AND (n.longitude <= CAST(m.VehicleLocationLongitude as float) + 0.3) \nWHERE m.VehicleRef is not null  \nAND   t.title is not null",
+  "mv_config" : {
+    "name" : "speedmtatranscomjoin",
+    "retention" : 0,
+    "min_row_retention_count" : 25000,
+    "recreate" : true,
+    "key_column_name" : "allid",
+    "api_key" : "8ab6adf5-62e3-4b5a-bc85-f3bc04d20e0c",
+    "ignore_nulls" : true,
+    "require_restart" : false,
+    "batch_size" : 0,
+    "enabled" : true
+  },
+  "runtime_config" : {
+    "execution_mode" : "SESSION",
+    "parallelism" : 1,
+    "sample_interval" : 1000,
+    "sample_count" : 100,
+    "window_size" : 100,
+    "start_with_savepoint" : false,
+    "log_config" : {
+      "type" : "LOG4J_PROPERTIES",
+      "content" : "\nrootLogger.level = INFO\nrootLogger.appenderRef.file.ref = MainAppender\n#Uncomment this if you want to _only_ change Flink's logging\n#logger.flink.name = org.apache.flink\n#logger.flink.level = INFO\n\n# The following lines keep the log level of common libraries/connectors on\n# log level INFO. The root logger does not override this. You have to manually\n# change the log levels here.\nlogger.akka.name = akka\nlogger.akka.level = INFO\nlogger.kafka.name= org.apache.kafka\nlogger.kafka.level = INFO\nlogger.hadoop.name = org.apache.hadoop\nlogger.hadoop.level = INFO\nlogger.zookeeper.name = org.apache.zookeeper\nlogger.zookeeper.level = INFO\n\n# Log all infos in the given file\nappender.main.name = MainAppender\nappender.main.type = File\nappender.main.append = false\nappender.main.fileName = /var/log/ssb\nappender.main.layout.type = PatternLayout\nappender.main.layout.pattern = %d{yyyy-MM-dd HH:mm:ss,SSS} %-5p %-60c %x - %m%n\n\n# Suppress the irrelevant (wrong) warnings from the Netty channel handler\nlogger.netty.name = org.apache.flink.shaded.akka.org.jboss.netty.channel.DefaultChannelPipeline\nlogger.netty.level = OFF\n"
+    }
+  }
+}

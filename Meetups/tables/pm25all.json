@@ -1,0 +1,21 @@
+{
+  "metadata" : {
+    "schema.0.data-type" : "VARCHAR(2147483647)",
+    "schema.2.name" : "pm1",
+    "format" : "avro",
+    "schema.1.name" : "pm25",
+    "scan.startup.mode" : "earliest-offset",
+    "schema.4.name" : "nh3",
+    "schema.1.data-type" : "INT",
+    "schema.3.data-type" : "INT",
+    "connector" : "kafka: Local Kafka",
+    "schema.2.data-type" : "INT",
+    "schema.3.name" : "pm10",
+    "topic" : "particles",
+    "schema.4.data-type" : "DOUBLE",
+    "schema.0.name" : "systemtime"
+  },
+  "type" : "ssb",
+  "table_name" : "pm25all",
+  "transform_code_b64_encoded" : false
+}

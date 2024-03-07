@@ -1,0 +1,48 @@
+{
+  "metadata" : {
+    "schema.7.data-type" : "VARCHAR(2147483647)",
+    "schema.8.metadata" : "timestamp",
+    "schema.0.data-type" : "VARCHAR(2147483647)",
+    "schema.1.name" : "description",
+    "scan.startup.mode" : "earliest-offset",
+    "schema.4.name" : "latitude",
+    "deserialization.failure.policy" : "ignore_and_log",
+    "schema.3.data-type" : "VARCHAR(2147483647)",
+    "schema.3.name" : "point",
+    "schema.7.name" : "uuid",
+    "properties.request.timeout.ms" : "120000",
+    "schema.watermark.0.strategy.data-type" : "TIMESTAMP(3)",
+    "schema.6.name" : "longitude",
+    "schema.5.data-type" : "VARCHAR(2147483647)",
+    "schema.0.name" : "title",
+    "schema.5.name" : "ts",
+    "schema.watermark.0.strategy.expr" : "`eventTimeStamp` - INTERVAL '3' SECOND",
+    "properties.auto.offset.reset" : "earliest",
+    "schema.8.data-type" : "TIMESTAMP(3) WITH LOCAL TIME ZONE",
+    "schema.2.name" : "pubDate",
+    "format" : "json",
+    "schema.8.virtual" : "false",
+    "schema.6.data-type" : "VARCHAR(2147483647)",
+    "schema.1.data-type" : "VARCHAR(2147483647)",
+    "connector" : "kafka: Local Kafka",
+    "schema.2.data-type" : "VARCHAR(2147483647)",
+    "schema.watermark.0.rowtime" : "eventTimeStamp",
+    "properties.transaction.timeout.ms" : "900000",
+    "topic" : "transcom",
+    "schema.4.data-type" : "VARCHAR(2147483647)",
+    "schema.8.name" : "eventTimeStamp",
+    "ssb.schema.text" : "{\n  \"type\": \"record\",\n  \"name\": \"inferredSchema\",\n  \"fields\": [\n    {\n      \"name\": \"title\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"Franklin Avenue Shuttle both directions:Track replacement\\\"'\"\n    },\n    {\n      \"name\": \"description\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"MTA NYC Transit Subway: due to Track replacement both directions, Franklin Avenue Shuttle at Botanic Garden (New York) Runs every 24 minutes. All trains board/exit at the Prospect Park-bound platform., Tuesday February 6th, 2024 thru Friday February 9th, 2024, Tuesday/Wednesday/Thursday/Friday, 12:01 AM thru 05:00 AM\\\"'\"\n    },\n    {\n      \"name\": \"pubDate\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"2024-02-02T11:27:21\\\"'\"\n    },\n    {\n      \"name\": \"point\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"40.670343 -73.959245\\\"'\"\n    },\n    {\n      \"name\": \"latitude\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"40.670343\\\"'\"\n    },\n    {\n      \"name\": \"ts\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"1707332609377\\\"'\"\n    },\n    {\n      \"name\": \"longitude\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"-73.959245\\\"'\"\n    },\n    {\n      \"name\": \"uuid\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"f4171842-3ca8-4849-a95b-481aedcba736\\\"'\"\n    }\n  ]\n}",
+    "ssb.watermark_spec" : {
+      "timestamp_column" : "__ssb_kafka_timestamp",
+      "watermark_seconds" : null,
+      "rowtime_column" : "eventTimeStamp"
+    },
+    "ssb.properties" : {
+      "auto.offset.reset" : "earliest"
+    }
+  },
+  "type" : "ssb",
+  "table_name" : "jsontranscom",
+  "transform_code_b64_encoded" : false,
+  "transform_code" : ""
+}

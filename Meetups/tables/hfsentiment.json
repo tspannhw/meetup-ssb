@@ -1,0 +1,46 @@
+{
+  "metadata" : {
+    "schema.0.data-type" : "VARCHAR(2147483647)",
+    "schema.1.name" : "label",
+    "scan.startup.mode" : "group-offsets",
+    "schema.4.name" : "ts",
+    "deserialization.failure.policy" : "ignore_and_log",
+    "schema.3.data-type" : "VARCHAR(2147483647)",
+    "schema.6.metadata" : "timestamp",
+    "schema.3.name" : "textbody",
+    "properties.request.timeout.ms" : "120000",
+    "schema.watermark.0.strategy.data-type" : "TIMESTAMP(3)",
+    "schema.6.name" : "eventTimestamp",
+    "schema.5.data-type" : "VARCHAR(2147483647)",
+    "schema.6.virtual" : "false",
+    "schema.0.name" : "sentiment",
+    "schema.5.name" : "uuid",
+    "schema.watermark.0.strategy.expr" : "`eventTimestamp` - INTERVAL '3' SECOND",
+    "properties.auto.offset.reset" : "earliest",
+    "schema.2.name" : "score",
+    "format" : "json",
+    "schema.6.data-type" : "TIMESTAMP(3) WITH LOCAL TIME ZONE",
+    "schema.1.data-type" : "VARCHAR(2147483647)",
+    "connector" : "kafka: Local Kafka",
+    "schema.2.data-type" : "DOUBLE",
+    "schema.watermark.0.rowtime" : "eventTimestamp",
+    "properties.transaction.timeout.ms" : "900000",
+    "topic" : "hfsentiment",
+    "properties.group.id" : "hfsentimentflinkssb1",
+    "schema.4.data-type" : "VARCHAR(2147483647)",
+    "ssb.schema.text" : "{\n  \"type\": \"record\",\n  \"name\": \"inferredSchema\",\n  \"fields\": [\n    {\n      \"name\": \"sentiment\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"negative\\\"'\"\n    },\n    {\n      \"name\": \"label\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"NEGATIVE\\\"'\"\n    },\n    {\n      \"name\": \"score\",\n      \"type\": \"double\",\n      \"doc\": \"Type inferred from '0.9025264382362366'\"\n    },\n    {\n      \"name\": \"textbody\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"Much of the affordable housing in the tourist town is far from its famous entertainment strip. One solution: motor scooters offered for no money down.Ms. Schubert was able to finance her scooter with no money down and no credit check as part of a new program launched by Elevate Branson, a nonprofit group.\\\"'\"\n    },\n    {\n      \"name\": \"ts\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"1691256305577\\\"'\"\n    },\n    {\n      \"name\": \"uuid\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"04592198-430c-4865-97ff-00c534f72c4e\\\"'\"\n    }\n  ]\n}",
+    "ssb.watermark_spec" : {
+      "timestamp_column" : "__ssb_kafka_timestamp",
+      "watermark_seconds" : null,
+      "rowtime_column" : "eventTimestamp"
+    },
+    "ssb.properties" : {
+      "auto.offset.reset" : "earliest",
+      "group.id" : "hfsentimentflinkssb1"
+    }
+  },
+  "type" : "ssb",
+  "table_name" : "hfsentiment",
+  "transform_code_b64_encoded" : false,
+  "transform_code" : ""
+}

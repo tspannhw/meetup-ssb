@@ -1,0 +1,50 @@
+{
+  "metadata" : {
+    "schema.7.data-type" : "VARCHAR(2147483647)",
+    "schema.0.data-type" : "VARCHAR(2147483647)",
+    "schema.9.name" : "eventTimeStamp",
+    "schema.1.name" : "ts",
+    "scan.startup.mode" : "group-offsets",
+    "schema.4.name" : "x_compute_time",
+    "schema.3.data-type" : "VARCHAR(2147483647)",
+    "schema.9.metadata" : "timestamp",
+    "schema.3.name" : "inputs",
+    "schema.7.name" : "x_time_per_token",
+    "properties.request.timeout.ms" : "120000",
+    "schema.watermark.0.strategy.data-type" : "TIMESTAMP(3)",
+    "schema.6.name" : "uuid",
+    "schema.5.data-type" : "VARCHAR(2147483647)",
+    "schema.0.name" : "generated_text",
+    "schema.5.name" : "x_inference_time",
+    "schema.watermark.0.strategy.expr" : "`eventTimeStamp` - INTERVAL '3' SECOND",
+    "properties.auto.offset.reset" : "earliest",
+    "schema.8.data-type" : "VARCHAR(2147483647)",
+    "schema.2.name" : "x_compute_type",
+    "format" : "json",
+    "schema.6.data-type" : "VARCHAR(2147483647)",
+    "schema.9.virtual" : "false",
+    "schema.1.data-type" : "VARCHAR(2147483647)",
+    "connector" : "kafka: Local Kafka",
+    "schema.2.data-type" : "VARCHAR(2147483647)",
+    "schema.watermark.0.rowtime" : "eventTimeStamp",
+    "properties.transaction.timeout.ms" : "900000",
+    "topic" : "hfbloom",
+    "properties.group.id" : "llmBloomProps",
+    "schema.9.data-type" : "TIMESTAMP(3) WITH LOCAL TIME ZONE",
+    "schema.4.data-type" : "VARCHAR(2147483647)",
+    "schema.8.name" : "x_compute_characters",
+    "ssb.schema.text" : "{\n  \"type\": \"record\",\n  \"name\": \"inferredSchema\",\n  \"fields\": [\n    {\n      \"name\": \"generated_text\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"The FLaNK Stack consists of Apache Flink,  Apache Kafka, and Apache NiFi. The FLaNK Stack is a powerful, open source,\\\"'\"\n    },\n    {\n      \"name\": \"ts\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"1692244670487\\\"'\"\n    },\n    {\n      \"name\": \"x_compute_type\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"gpu+optimized\\\"'\"\n    },\n    {\n      \"name\": \"inputs\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"The FLaNK Stack consists of Apache Flink, \\\"'\"\n    },\n    {\n      \"name\": \"x_compute_time\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"1002\\\"'\"\n    },\n    {\n      \"name\": \"x_inference_time\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"980\\\"'\"\n    },\n    {\n      \"name\": \"uuid\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"7722444b-35f7-428a-b59c-3234c1e23fdd\\\"'\"\n    },\n    {\n      \"name\": \"x_time_per_token\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"49\\\"'\"\n    },\n    {\n      \"name\": \"x_compute_characters\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"42\\\"'\"\n    }\n  ]\n}",
+    "ssb.watermark_spec" : {
+      "timestamp_column" : "__ssb_kafka_timestamp",
+      "rowtime_column" : "eventTimeStamp"
+    },
+    "ssb.properties" : {
+      "auto.offset.reset" : "earliest",
+      "group.id" : "llmBloomProps"
+    }
+  },
+  "type" : "ssb",
+  "table_name" : "hfbloom",
+  "transform_code_b64_encoded" : false,
+  "transform_code" : ""
+}

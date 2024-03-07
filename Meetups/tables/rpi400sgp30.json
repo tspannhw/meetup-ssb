@@ -1,0 +1,33 @@
+{
+  "metadata" : {
+    "avro.schema" : "{\"type\":\"record\",\"name\":\"exampleSchema\",\"namespace\":\"com.eventador.exampleschema\",\"doc\":\"Default schema - modify as necessary\",\"fields\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"temp\",\"type\":\"int\"}]}",
+    "schema.watermark.0.strategy.expr" : "`eventTimestamp` - INTERVAL '3' SECOND",
+    "properties.auto.offset.reset" : "earliest",
+    "schema.2.virtual" : "false",
+    "schema.0.data-type" : "VARCHAR(2147483647)",
+    "schema.2.metadata" : "timestamp",
+    "schema.2.name" : "eventTimestamp",
+    "format" : "avro",
+    "schema.1.name" : "temp",
+    "scan.startup.mode" : "earliest-offset",
+    "schema.1.data-type" : "INT",
+    "connector" : "kafka: Local Kafka",
+    "schema.2.data-type" : "TIMESTAMP(3) WITH LOCAL TIME ZONE",
+    "properties.request.timeout.ms" : "120000",
+    "schema.watermark.0.rowtime" : "eventTimestamp",
+    "schema.watermark.0.strategy.data-type" : "TIMESTAMP(3)",
+    "properties.transaction.timeout.ms" : "900000",
+    "topic" : "rpi400sensor",
+    "schema.0.name" : "name",
+    "ssb.schema.text" : "{\n    \"doc\": \"Default schema - modify as necessary\",\n    \"namespace\": \"com.eventador.exampleschema\",\n    \"type\": \"record\",\n    \"name\": \"exampleSchema\",\n    \"fields\": [\n        {\n            \"type\": \"string\",\n            \"name\": \"name\"\n        },\n        {\n            \"type\": \"int\",\n            \"name\": \"temp\"\n        }\n    ]\n}",
+    "ssb.watermark_spec" : {
+      "timestamp_column" : "__ssb_kafka_timestamp"
+    },
+    "ssb.properties" : {
+      "auto.offset.reset" : "earliest"
+    }
+  },
+  "type" : "ssb",
+  "table_name" : "rpi400sgp30",
+  "transform_code_b64_encoded" : false
+}

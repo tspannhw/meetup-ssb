@@ -1,0 +1,231 @@
+{
+  "job_name" : "alltransitvehicleposition",
+  "api_endpoints" : [ {
+    "endpoint" : "alltransit",
+    "code" : "SELECT \"route_id\", \"bearing\", \"directionid\", \"latitude\", \"tripid\", \"vehiclelabel\", \"vehicleid\", \"startdate\", \"uuid\", \"speed\", \"longitude\", \"timestamp\", \"locationcountrycode\", \"maxlat\", \"maxlong\", \"locationmunicipality\", \"minlong\", \"locationsubdivisionname\", \"minlat\", \"ts\", \"rundate\", \"providername\", \"transitname\", \"eventTimeStamp\" FROM mv_1aa89649_alltransitvehicleposition",
+    "builder_data" : {
+      "rules" : {
+        "condition" : "AND",
+        "rules" : [ ]
+      },
+      "selectedColumns" : [ {
+        "index" : 1,
+        "name" : "route_id",
+        "alias" : "route_id",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 2,
+        "name" : "bearing",
+        "alias" : "bearing",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 3,
+        "name" : "directionid",
+        "alias" : "directionid",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 4,
+        "name" : "latitude",
+        "alias" : "latitude",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 5,
+        "name" : "tripid",
+        "alias" : "tripid",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 6,
+        "name" : "vehiclelabel",
+        "alias" : "vehiclelabel",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 7,
+        "name" : "vehicleid",
+        "alias" : "vehicleid",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 8,
+        "name" : "startdate",
+        "alias" : "startdate",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 9,
+        "name" : "uuid",
+        "alias" : "uuid",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 10,
+        "name" : "speed",
+        "alias" : "speed",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 11,
+        "name" : "longitude",
+        "alias" : "longitude",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 12,
+        "name" : "timestamp",
+        "alias" : "timestamp",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 13,
+        "name" : "locationcountrycode",
+        "alias" : "locationcountrycode",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 14,
+        "name" : "maxlat",
+        "alias" : "maxlat",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 15,
+        "name" : "maxlong",
+        "alias" : "maxlong",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 16,
+        "name" : "locationmunicipality",
+        "alias" : "locationmunicipality",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 17,
+        "name" : "minlong",
+        "alias" : "minlong",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 18,
+        "name" : "locationsubdivisionname",
+        "alias" : "locationsubdivisionname",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 19,
+        "name" : "minlat",
+        "alias" : "minlat",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 20,
+        "name" : "ts",
+        "alias" : "ts",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 21,
+        "name" : "rundate",
+        "alias" : "rundate",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 22,
+        "name" : "providername",
+        "alias" : "providername",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 23,
+        "name" : "transitname",
+        "alias" : "transitname",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 24,
+        "name" : "eventTimeStamp",
+        "alias" : "eventTimeStamp",
+        "expr" : null,
+        "typeName" : "TIMESTAMP_WITH_LOCAL_TIME_ZONE",
+        "watermark" : false,
+        "primaryKey" : false
+      } ]
+    }
+  } ],
+  "sql" : "select * from transitvehiclepositions",
+  "mv_config" : {
+    "name" : "alltransitvehicleposition",
+    "retention" : 0,
+    "min_row_retention_count" : 5000,
+    "recreate" : true,
+    "key_column_name" : "uuid",
+    "api_key" : "bf3c3717-9144-4138-9de6-88f58e0f9b67",
+    "ignore_nulls" : true,
+    "require_restart" : false,
+    "batch_size" : 0,
+    "enabled" : true
+  },
+  "runtime_config" : {
+    "execution_mode" : "SESSION",
+    "parallelism" : 1,
+    "sample_interval" : 1000,
+    "sample_count" : 100,
+    "window_size" : 100,
+    "start_with_savepoint" : false,
+    "log_config" : {
+      "type" : "LOG4J_PROPERTIES",
+      "content" : "\nrootLogger.level = INFO\nrootLogger.appenderRef.file.ref = MainAppender\n#Uncomment this if you want to _only_ change Flink's logging\n#logger.flink.name = org.apache.flink\n#logger.flink.level = INFO\n\n# The following lines keep the log level of common libraries/connectors on\n# log level INFO. The root logger does not override this. You have to manually\n# change the log levels here.\nlogger.akka.name = akka\nlogger.akka.level = INFO\nlogger.kafka.name= org.apache.kafka\nlogger.kafka.level = INFO\nlogger.hadoop.name = org.apache.hadoop\nlogger.hadoop.level = INFO\nlogger.zookeeper.name = org.apache.zookeeper\nlogger.zookeeper.level = INFO\n\n# Log all infos in the given file\nappender.main.name = MainAppender\nappender.main.type = File\nappender.main.append = false\nappender.main.fileName = /var/log/ssb\nappender.main.layout.type = PatternLayout\nappender.main.layout.pattern = %d{yyyy-MM-dd HH:mm:ss,SSS} %-5p %-60c %x - %m%n\n\n# Suppress the irrelevant (wrong) warnings from the Netty channel handler\nlogger.netty.name = org.apache.flink.shaded.akka.org.jboss.netty.channel.DefaultChannelPipeline\nlogger.netty.level = OFF\n"
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "job_name" : "halifax",
+  "api_endpoints" : [ {
+    "endpoint" : "halifax",
+    "code" : "SELECT \"stopsequence\", \"arrivaltime\", \"stopid\", \"tripid\", \"tripstartdate\", \"departuretime\", \"triprouteid\", \"ts\", \"uuid\", \"route_long_name\", \"stop_name\", \"eventTimeStamp\" FROM mv_1aa89649_halifax",
+    "builder_data" : {
+      "rules" : {
+        "condition" : "AND",
+        "rules" : [ ]
+      },
+      "selectedColumns" : [ {
+        "index" : 1,
+        "name" : "stopsequence",
+        "alias" : "stopsequence",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 2,
+        "name" : "arrivaltime",
+        "alias" : "arrivaltime",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 3,
+        "name" : "stopid",
+        "alias" : "stopid",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 4,
+        "name" : "tripid",
+        "alias" : "tripid",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 5,
+        "name" : "tripstartdate",
+        "alias" : "tripstartdate",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 6,
+        "name" : "departuretime",
+        "alias" : "departuretime",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 7,
+        "name" : "triprouteid",
+        "alias" : "triprouteid",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 8,
+        "name" : "ts",
+        "alias" : "ts",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 9,
+        "name" : "uuid",
+        "alias" : "uuid",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 10,
+        "name" : "route_long_name",
+        "alias" : "route_long_name",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 11,
+        "name" : "stop_name",
+        "alias" : "stop_name",
+        "expr" : null,
+        "typeName" : "VARCHAR",
+        "watermark" : false,
+        "primaryKey" : false
+      }, {
+        "index" : 12,
+        "name" : "eventTimeStamp",
+        "alias" : "eventTimeStamp",
+        "expr" : null,
+        "typeName" : "TIMESTAMP_WITH_LOCAL_TIME_ZONE",
+        "watermark" : false,
+        "primaryKey" : false
+      } ]
+    },
+    "description" : "halifax"
+  } ],
+  "sql" : "select * from halifaxupdates",
+  "mv_config" : {
+    "name" : "halifax",
+    "retention" : 0,
+    "min_row_retention_count" : 1000,
+    "recreate" : true,
+    "key_column_name" : "uuid",
+    "api_key" : "e088e6cd-d0a7-4bf1-951f-8f8231749538",
+    "ignore_nulls" : true,
+    "require_restart" : false,
+    "batch_size" : 0,
+    "enabled" : true
+  },
+  "runtime_config" : {
+    "execution_mode" : "SESSION",
+    "parallelism" : 1,
+    "sample_interval" : 1000,
+    "sample_count" : 500,
+    "window_size" : 500,
+    "start_with_savepoint" : false,
+    "log_config" : {
+      "type" : "LOG4J_PROPERTIES",
+      "content" : "\nrootLogger.level = INFO\nrootLogger.appenderRef.file.ref = MainAppender\n#Uncomment this if you want to _only_ change Flink's logging\n#logger.flink.name = org.apache.flink\n#logger.flink.level = INFO\n\n# The following lines keep the log level of common libraries/connectors on\n# log level INFO. The root logger does not override this. You have to manually\n# change the log levels here.\nlogger.akka.name = akka\nlogger.akka.level = INFO\nlogger.kafka.name= org.apache.kafka\nlogger.kafka.level = INFO\nlogger.hadoop.name = org.apache.hadoop\nlogger.hadoop.level = INFO\nlogger.zookeeper.name = org.apache.zookeeper\nlogger.zookeeper.level = INFO\n\n# Log all infos in the given file\nappender.main.name = MainAppender\nappender.main.type = File\nappender.main.append = false\nappender.main.fileName = /var/log/ssb\nappender.main.layout.type = PatternLayout\nappender.main.layout.pattern = %d{yyyy-MM-dd HH:mm:ss,SSS} %-5p %-60c %x - %m%n\n\n# Suppress the irrelevant (wrong) warnings from the Netty channel handler\nlogger.netty.name = org.apache.flink.shaded.akka.org.jboss.netty.channel.DefaultChannelPipeline\nlogger.netty.level = OFF\n"
+    }
+  }
+}

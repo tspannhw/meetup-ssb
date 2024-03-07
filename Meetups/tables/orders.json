@@ -1,0 +1,30 @@
+{
+  "metadata" : {
+    "schema.5.name" : "order_status",
+    "schema.watermark.0.strategy.expr" : "`order_time` - INTERVAL '15' SECOND",
+    "fields.order_time.expression" : "#{date.past '15','SECONDS'}",
+    "fields.street_address.expression" : "#{Address.street_address}",
+    "schema.0.data-type" : "INT",
+    "schema.2.name" : "street_address",
+    "fields.amount.expression" : "#{number.numberBetween '0','100'}",
+    "fields.order_id.expression" : "#{number.numberBetween '0','99999999'}",
+    "schema.1.name" : "city",
+    "schema.4.name" : "order_time",
+    "schema.1.data-type" : "VARCHAR(2147483647)",
+    "schema.3.data-type" : "INT",
+    "connector" : "faker",
+    "schema.2.data-type" : "VARCHAR(2147483647)",
+    "schema.3.name" : "amount",
+    "schema.watermark.0.rowtime" : "order_time",
+    "schema.watermark.0.strategy.data-type" : "TIMESTAMP(3)",
+    "schema.5.data-type" : "VARCHAR(2147483647)",
+    "fields.city.expression" : "#{Address.city}",
+    "rows-per-second" : "1",
+    "fields.order_status.expression" : "#{regexify '(RECEIVED|PREPARING|DELIVERING|DELIVERED|CANCELED){1}'}",
+    "schema.4.data-type" : "TIMESTAMP(3)",
+    "schema.0.name" : "order_id"
+  },
+  "type" : "ssb",
+  "table_name" : "orders",
+  "transform_code_b64_encoded" : false
+}
