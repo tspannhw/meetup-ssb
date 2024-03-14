@@ -1,0 +1,8 @@
+{
+  "name" : "TO_EPOCH",
+  "description" : "date to epoch",
+  "language" : "JavaScript",
+  "output_type" : "STRING",
+  "input_types" : [ "" ],
+  "code" : "function TO_EPOCH(strDate) {\n   var strFmt = \"yyyy-MM-dd HH:ss:mm\";\n   var c = new java.text.SimpleDateFormat(strFmt).parse(strDate).getTime()/1000;\n   return c.toString();\n}\nTO_EPOCH($p0);"
+}

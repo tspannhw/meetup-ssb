@@ -1,0 +1,8 @@
+{
+  "name" : "IP2DEC",
+  "description" : "ip2dec",
+  "language" : "JavaScript",
+  "output_type" : "BIGINT",
+  "input_types" : [ "" ],
+  "code" : "// IP2DEC UDF\n// Configure input type -> STRING, output type -> BIGINT\nfunction ip2dec(ip) {\n   return ip.split('.')\n     .reduce(function(ipInt, octet) {\n        return (ipInt<<8) + parseInt(octet, 10)\n      }, 0) >>> 0;\n}\nip2dec($p0);"
+}

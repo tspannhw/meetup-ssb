@@ -1,0 +1,12 @@
+{
+  "metadata" : {
+    "format" : "json",
+    "path" : "file:///persistent/example.json",
+    "connector" : "filesystem",
+    "schema.0.data-type" : "VARCHAR(2147483647)",
+    "schema.0.name" : "foo"
+  },
+  "type" : "ssb",
+  "table_name" : "my_file_source",
+  "transform_code_b64_encoded" : false
+}

@@ -1,19 +1,6 @@
 {
-  "job_name" : "demojob",
+  "job_name" : "cdc",
   "api_endpoints" : [ ],
-  "sql" : "insert into local_kafka_table_1709829993 select * from summaries",
-  "mv_config" : {
-    "name" : "demojob",
-    "retention" : 300,
-    "min_row_retention_count" : 0,
-    "recreate" : false,
-    "key_column_name" : null,
-    "api_key" : null,
-    "ignore_nulls" : false,
-    "require_restart" : false,
-    "batch_size" : 0,
-    "enabled" : false
-  },
   "runtime_config" : {
     "execution_mode" : "SESSION",
     "parallelism" : 1,

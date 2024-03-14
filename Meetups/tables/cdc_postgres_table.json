@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "debezium.slot.name" : "flink4",
+    "schema.0.data-type" : "VARCHAR(2147483647)",
+    "schema.2.name" : "ts",
+    "schema.1.name" : "b",
+    "schema.1.data-type" : "INT",
+    "schema.2.expr" : "PROCTIME()",
+    "hostname" : "192.168.1.158",
+    "password" : "ssb_cdc1",
+    "connector" : "postgres-cdc",
+    "schema.2.data-type" : "TIMESTAMP(3) WITH LOCAL TIME ZONE NOT NULL",
+    "database-name" : "ssb_cdc",
+    "schema-name" : "public",
+    "decoding.plugin.name" : "pgoutput",
+    "table-name" : "cdc_table",
+    "username" : "ssb_cdc",
+    "schema.0.name" : "a"
+  },
+  "type" : "ssb",
+  "table_name" : "cdc_postgres_table",
+  "transform_code_b64_encoded" : false
+}

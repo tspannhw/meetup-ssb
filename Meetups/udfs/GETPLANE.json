@@ -1,0 +1,8 @@
+{
+  "name" : "GETPLANE",
+  "description" : "GETPLANE",
+  "language" : "JavaScript",
+  "output_type" : "STRING",
+  "input_types" : [ "" ],
+  "code" : "function GETPLANE(icao) {\n  try {\n    var c = new java.net.URL('http://yyyyyy.io' + icao).openConnection();\n    c.requestMethod='GET';\n    var reader = new java.io.BufferedReader(new java.io.InputStreamReader(c.inputStream));\n    return reader.readLine();\n  } catch(err) {\n    return \"Unknown: \" + err;\n  }\n}\nGETPLANE($p0);"
+}
