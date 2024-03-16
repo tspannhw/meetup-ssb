@@ -1,0 +1,8 @@
+{
+  "name" : "CALLLLM",
+  "description" : "CALLLLML: call LLM",
+  "language" : "JavaScript",
+  "output_type" : "STRING",
+  "input_types" : [ "STRING" ],
+  "code" : "function CALLLLM(input) {\n   try {\n      var c = new java.net.URL('http://192.168.1.158:9676/query?calltype=llm&key=' + java.net.URLEncoder.encode(input)).openConnection();\n      c.requestMethod='GET';\n      var reader = new java.io.BufferedReader(new java.io.InputStreamReader(c.inputStream));\n      var inputLine = new java.lang.String();\n      var out = new java.lang.StringBuilder(\"\");\n      if ( reader != null ) { \n         while ((inputLine = reader.readLine()) != null)\n            out.append(inputLine);\n      }\n      reader.close();\n      return out.toString();\n   } catch(err) {\n    return \"Unknown: \" + err;\n   }\n}\nCALLLLM($p0);"
+}
