@@ -1,0 +1,20 @@
+{
+  "metadata" : {
+    "schema.0.data-type" : "VARCHAR(2147483647)",
+    "schema.2.name" : "messageusername",
+    "schema.1.name" : "messageusertz",
+    "url" : "jdbc:postgresql://192.168.1.158:5432/tspann",
+    "schema.1.data-type" : "VARCHAR(2147483647)",
+    "password" : "tspann",
+    "connector" : "jdbc",
+    "schema.2.data-type" : "VARCHAR(2147483647) NOT NULL",
+    "schema.primary-key.name" : "PK_1601370",
+    "schema.primary-key.columns" : "messageusername",
+    "table-name" : "slackusers",
+    "username" : "tspann",
+    "schema.0.name" : "messagerealname"
+  },
+  "type" : "ssb",
+  "table_name" : "postgres_jdbc_slackusers",
+  "transform_code_b64_encoded" : false
+}
