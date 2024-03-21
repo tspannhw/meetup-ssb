@@ -1,0 +1,8 @@
+{
+  "name" : "CALLAI",
+  "description" : "call ai model",
+  "language" : "JavaScript",
+  "output_type" : "STRING",
+  "input_types" : [ "STRING" ],
+  "code" : "function CALLAI(input) {\n   try {\n    var con = new java.net.URL(\"https://modelservice.ml-f1051bc9-513.go01-dem.ylcu-atmi.cloudera.site/model\").openConnection();\n    con.requestMethod = \"POST\";\n    con.setRequestProperty(\"Content-Type\", \"application/json\");\n    var data  = \"{\\\"accessKey\\\":\\\"mqkq25j7yvukvm905d73yxuxm24qlnp3\\\",\\\"request\\\":{\\\"text\\\":\\\"\" + input + \"\\\",\\\"task\\\":\\\"ai_help\\\"}}\";\n\n    // Send post request\n    con.doOutput=true;\n    var wr = new java.io.DataOutputStream(con.outputStream);\n    wr.writeBytes(data);\n    wr.flush();\n    wr.close();\n    var reader = new java.io.BufferedReader(new java.io.InputStreamReader(con.inputStream));\n    var inputLine = new java.lang.String();\n    var out = new java.lang.StringBuilder(\"\");\n    if ( reader != null ) { \n      while ((inputLine = reader.readLine()) != null)\n      out.append(inputLine);\n    }\n    reader.close();\n    return out.toString();\n   } catch(err) {\n    err.printStackTrace();  \n    return \"Unknown: \" + err;\n   }\n}\nCALLAI($p0);  // this line must exist"
+}

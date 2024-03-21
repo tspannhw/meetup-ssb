@@ -1,0 +1,8 @@
+{
+  "name" : "CMLEXECUTE",
+  "description" : "cmlexecute run",
+  "language" : "JavaScript",
+  "output_type" : "STRING",
+  "input_types" : [ "STRING" ],
+  "code" : "function CMLEXECUTE(input) {\n   try {\n    var con = new java.net.URL(\"http://192.168.1.158:9676/query?calltype=llm&key=\").openConnection();\n    con.requestMethod = \"POST\";\n    con.setRequestProperty(\"Content-Type\", \"application/json\");\n\n    // Send post request\n    con.doOutput=true;\n    var wr = new java.io.DataOutputStream(con.outputStream);\n    wr.writeBytes(input);\n    wr.flush();\n    wr.close();\n    var reader = new java.io.BufferedReader(new java.io.InputStreamReader(con.inputStream));\n    var inputLine = new java.lang.String();\n    var out = new java.lang.StringBuilder(\"\");\n    if ( reader != null ) { \n      while ((inputLine = reader.readLine()) != null)\n      out.append(inputLine);\n    }\n    reader.close();\n    return out.toString();\n   } catch(err) {\n    return \"Unknown: \" + err;\n   }\n}\nCMLEXECUTE($p0);"
+}
