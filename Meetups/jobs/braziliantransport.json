@@ -1,97 +1,6 @@
 {
   "job_name" : "braziliantransport",
-  "api_endpoints" : [ {
-    "endpoint" : "transit",
-    "code" : "SELECT \"uuid\", \"hr\", \"vehicleprefix\", \"lineidentifier\", \"linedestinationsign\", \"lineoriginsign\", \"direction\", \"latitude\", \"longitude\", \"ta\" FROM mv_1aa89649_braziliantransport",
-    "builder_data" : {
-      "rules" : {
-        "condition" : "AND",
-        "rules" : [ ]
-      },
-      "selectedColumns" : [ {
-        "index" : 1,
-        "name" : "uuid",
-        "alias" : "uuid",
-        "expr" : null,
-        "typeName" : "VARCHAR",
-        "watermark" : false,
-        "primaryKey" : false
-      }, {
-        "index" : 2,
-        "name" : "hr",
-        "alias" : "hr",
-        "expr" : null,
-        "typeName" : "VARCHAR",
-        "watermark" : false,
-        "primaryKey" : false
-      }, {
-        "index" : 3,
-        "name" : "vehicleprefix",
-        "alias" : "vehicleprefix",
-        "expr" : null,
-        "typeName" : "BIGINT",
-        "watermark" : false,
-        "primaryKey" : false
-      }, {
-        "index" : 4,
-        "name" : "lineidentifier",
-        "alias" : "lineidentifier",
-        "expr" : null,
-        "typeName" : "VARCHAR",
-        "watermark" : false,
-        "primaryKey" : false
-      }, {
-        "index" : 5,
-        "name" : "linedestinationsign",
-        "alias" : "linedestinationsign",
-        "expr" : null,
-        "typeName" : "VARCHAR",
-        "watermark" : false,
-        "primaryKey" : false
-      }, {
-        "index" : 6,
-        "name" : "lineoriginsign",
-        "alias" : "lineoriginsign",
-        "expr" : null,
-        "typeName" : "VARCHAR",
-        "watermark" : false,
-        "primaryKey" : false
-      }, {
-        "index" : 7,
-        "name" : "direction",
-        "alias" : "direction",
-        "expr" : null,
-        "typeName" : "VARCHAR",
-        "watermark" : false,
-        "primaryKey" : false
-      }, {
-        "index" : 8,
-        "name" : "latitude",
-        "alias" : "latitude",
-        "expr" : null,
-        "typeName" : "DOUBLE",
-        "watermark" : false,
-        "primaryKey" : false
-      }, {
-        "index" : 9,
-        "name" : "longitude",
-        "alias" : "longitude",
-        "expr" : null,
-        "typeName" : "DOUBLE",
-        "watermark" : false,
-        "primaryKey" : false
-      }, {
-        "index" : 11,
-        "name" : "ta",
-        "alias" : "ta",
-        "expr" : null,
-        "typeName" : "VARCHAR",
-        "watermark" : false,
-        "primaryKey" : false
-      } ]
-    },
-    "description" : "brazil transit mv"
-  } ],
+  "api_endpoints" : [ ],
   "sql" : "select SPTransVehiclePositionsCluster.uuid, SPTransVehiclePositionsCluster.hr, SPTransVehiclePositionsCluster.vehicleprefix, \n       SPTransVehiclePositionsCluster.lineidentifier, \n       SPTransVehiclePositionsCluster.linedestinationsign, SPTransVehiclePositionsCluster.lineoriginsign,\n       SPTransVehiclePositionsCluster.direction,  \n       SPTransVehiclePositionsCluster.latitude,  SPTransVehiclePositionsCluster.longitude, \n       SPTransVehiclePositionsCluster.utcts,SPTransVehiclePositionsCluster.ta\nfrom SPTransVehiclePositionsCluster ",
   "mv_config" : {
     "name" : "braziliantransport",
@@ -109,8 +18,8 @@
     "execution_mode" : "SESSION",
     "parallelism" : 1,
     "sample_interval" : 1000,
-    "sample_count" : 500,
-    "window_size" : 250,
+    "sample_count" : 100,
+    "window_size" : 100,
     "start_with_savepoint" : true,
     "log_config" : {
       "type" : "LOG4J_PROPERTIES",

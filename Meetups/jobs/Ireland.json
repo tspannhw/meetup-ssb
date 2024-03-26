@@ -1,9 +1,9 @@
 {
-  "job_name" : "compassionate_mirzakhani",
+  "job_name" : "Ireland",
   "api_endpoints" : [ ],
-  "sql" : "select * from postgres_jdbc_meetupusers",
+  "sql" : "select * from irelandvehicle",
   "mv_config" : {
-    "name" : "compassionate_mirzakhani",
+    "name" : "Ireland",
     "retention" : 300,
     "min_row_retention_count" : 0,
     "recreate" : false,
@@ -18,9 +18,9 @@
     "execution_mode" : "SESSION",
     "parallelism" : 1,
     "sample_interval" : 1000,
-    "sample_count" : 100,
-    "window_size" : 100,
-    "start_with_savepoint" : false,
+    "sample_count" : 1000,
+    "window_size" : 1000,
+    "start_with_savepoint" : true,
     "log_config" : {
       "type" : "LOG4J_PROPERTIES",
       "content" : "\nrootLogger.level = INFO\nrootLogger.appenderRef.file.ref = MainAppender\n#Uncomment this if you want to _only_ change Flink's logging\n#logger.flink.name = org.apache.flink\n#logger.flink.level = INFO\n\n# The following lines keep the log level of common libraries/connectors on\n# log level INFO. The root logger does not override this. You have to manually\n# change the log levels here.\nlogger.akka.name = akka\nlogger.akka.level = INFO\nlogger.kafka.name= org.apache.kafka\nlogger.kafka.level = INFO\nlogger.hadoop.name = org.apache.hadoop\nlogger.hadoop.level = INFO\nlogger.zookeeper.name = org.apache.zookeeper\nlogger.zookeeper.level = INFO\n\n# Log all infos in the given file\nappender.main.name = MainAppender\nappender.main.type = File\nappender.main.append = false\nappender.main.fileName = /var/log/ssb\nappender.main.layout.type = PatternLayout\nappender.main.layout.pattern = %d{yyyy-MM-dd HH:mm:ss,SSS} %-5p %-60c %x - %m%n\n\n# Suppress the irrelevant (wrong) warnings from the Netty channel handler\nlogger.netty.name = org.apache.flink.shaded.akka.org.jboss.netty.channel.DefaultChannelPipeline\nlogger.netty.level = OFF\n"

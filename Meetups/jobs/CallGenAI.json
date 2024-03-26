@@ -76,7 +76,7 @@
     },
     "description" : "genai"
   } ],
-  "sql" : "Select CALLLLM(CAST(messagetext as STRING)) as generatedtext, messagerealname, messageusername, messagetext,\n       messageusertz, messageid, threadts, ts\nFROM flankslackmessages\nWHERE messagetype = 'message'",
+  "sql" : "Select CALLLLM(CAST(messagetext as STRING)) as generatedtext, CALLAI(CAST(messagetext as STRING)) as cmltext, messagerealname, messageusername, messagetext,\n       messageusertz, messageid, threadts, ts\nFROM flankslackmessages\nWHERE messagetype = 'message'",
   "mv_config" : {
     "name" : "CallGenAI",
     "retention" : 0,
