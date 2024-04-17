@@ -1,0 +1,8 @@
+{
+  "name" : "HAVETOKM",
+  "description" : "HAVETOKM",
+  "language" : "JavaScript",
+  "output_type" : "STRING",
+  "input_types" : [ "STRING", "STRING", "STRING", "STRING" ],
+  "code" : "function HAVETOKM(lat1,lon1,lat2,lon2) {\nfunction toRad(x) {\nreturn x * Math.PI / 180;\n}\n\n  var R = 6371; // km\n  var x1 = lat2 - lat1;\n  var dLat = toRad(x1);\n  var x2 = lon2 - lon1;\n  var dLon = toRad(x2)\n  var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +\n    Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *\n    Math.sin(dLon / 2) * Math.sin(dLon / 2);\n  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));\n  var d = R * c;\n\n  // convert to string\n  return (d).toFixed(2).toString();\n}\nHAVETOKM($p0, $p1, $p2, $p3);"
+}
